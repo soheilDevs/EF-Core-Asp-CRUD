@@ -1,0 +1,19 @@
+﻿@page
+@model WebApplication2.Pages.Product.AddModel
+@{
+}
+<form class="row" method="post">
+    <div class="col-6">
+        <label asp-for="ProductName"></label>
+        <input asp-for="ProductName" class="form-control" />
+    </div>
+    <div class="col-6">
+        <label asp-for="ImageName"></label>
+        <input asp-for="ImageName" class="form-control" />
+    </div>
+    <div class="col-6">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+    </div>
+    <button class="btn btn-success" type="submit">Submit</button>
+</form> 

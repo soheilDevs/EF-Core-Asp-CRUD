@@ -1,0 +1,23 @@
+﻿@page
+@model WebApplication2.Pages.UserProduct.EditModel
+@{
+}
+<form class="row" method="post">
+    <div class="col-6">
+        <label asp-for="UserId"></label>
+        <input asp-for="UserId" class="form-control" />
+    </div>
+    <div class="col-6">
+        <label asp-for="ProductId"></label>
+        <input asp-for="ProductId" class="form-control" />
+    </div>
+    <div class="col-6">
+        <label asp-for="Color"></label>
+        <input type="email" asp-for="Color" class="form-control" />
+    </div>
+    <div class="col-6">
+        <label asp-for="Price"></label>
+        <input type="email" asp-for="Price" class="form-control" />
+    </div>
+    <button class="btn btn-success" type="submit">Submit</button>
+</form> 

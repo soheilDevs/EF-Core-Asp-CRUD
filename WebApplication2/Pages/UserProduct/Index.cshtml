@@ -1,0 +1,36 @@
+﻿@page
+@model WebApplication2.Pages.UserProduct.IndexModel
+@{
+}
+<a asp-page="Add" class="btn btn-success">افزودن </a>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>نام محصول</th>
+        <th>فروشنده</th>
+        <th>رنگ</th>
+        <th>قیمت</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.UserProducts)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Product.ProductName</td>
+            @*<td>@item.User.FullName</td>*@
+            <td>@item.Color</td>
+            <td>@item.Price.ToString("#,0") تومان</td>
+            <td>
+                <a asp-page="Edit" class="btn btn-info" asp-route-id="@item.Id">Edit</a>
+                <form method="post">
+                    <input type="hidden" name="id" value="@item.Id" />
+                    <button type="submit" onclick="return confirm('آیا از حذف  اطمینان دارید؟')" class="btn btn-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
